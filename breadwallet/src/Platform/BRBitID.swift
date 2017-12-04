@@ -39,13 +39,13 @@ open class BRBitID : NSObject {
         return url.scheme == SCHEME
     }
     
-    static let BITCOIN_SIGNED_MESSAGE_HEADER = "Bitcoin Signed Message:\n".data(using: String.Encoding.utf8)!
+    static let VERTCOIN_SIGNED_MESSAGE_HEADER = "Vertcoin Signed Message:\n".data(using: String.Encoding.utf8)!
     
     class func formatMessageForBitcoinSigning(_ message: String) -> Data {
         let data = NSMutableData()
-        var messageHeaderCount = UInt8(BITCOIN_SIGNED_MESSAGE_HEADER.count)
+        var messageHeaderCount = UInt8(VERTCOIN_SIGNED_MESSAGE_HEADER.count)
         data.append(NSData(bytes: &messageHeaderCount, length: MemoryLayout<UInt8>.size) as Data)
-        data.append(BITCOIN_SIGNED_MESSAGE_HEADER)
+        data.append(VERTCOIN_SIGNED_MESSAGE_HEADER)
         let msgBytes = message.data(using: String.Encoding.utf8)!
         data.appendVarInt(i: UInt64(msgBytes.count))
         data.append(msgBytes)
