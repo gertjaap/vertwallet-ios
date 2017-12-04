@@ -11,13 +11,9 @@ import Foundation
 enum S {
 
     enum Symbols {
-        static let bits = "ƀ"
+        static let bits = "vts"
         static var btc: String {
-            if  #available(iOS 10, *) {
-                return "₿"
-            } else {
-                return "Ƀ"
-            }
+            return "VTC"
         }
         static let narrowSpace = "\u{2009}"
         static let lock = "\u{1F512}"

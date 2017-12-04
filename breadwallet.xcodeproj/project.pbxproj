@@ -4823,8 +4823,10 @@
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
 				DEVELOPMENT_TEAM = 4R7S6N88W9;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = breadwallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "";
 				OTHER_SWIFT_FLAGS = "-DDebug";
 				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4845,6 +4847,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = breadwallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5136,6 +5139,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = breadwallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "";
 				OTHER_SWIFT_FLAGS = "-DDebug -DScreenshots -DTestnet";
 				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5271,7 +5275,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
-					"BITCOIN_TESTNET=1",
+					"VERTCOIN_TESTNET=1",
 				);
 				HEADER_SEARCH_PATHS = (
 					"${SRCROOT}/Modules/vertwallet-core",
@@ -5436,8 +5440,13 @@
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
 				DEVELOPMENT_TEAM = 4R7S6N88W9;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"VERTCOIN_TESTNET=1",
+				);
 				INFOPLIST_FILE = breadwallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "";
 				OTHER_SWIFT_FLAGS = "-DDebug -DTestnet";
 				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5573,7 +5582,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
-					"BITCOIN_TESTNET=1",
+					"VERTCOIN_TESTNET=1",
 				);
 				HEADER_SEARCH_PATHS = (
 					"${SRCROOT}/Modules/vertwallet-core",
@@ -5733,6 +5742,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = breadwallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "";
 				OTHER_SWIFT_FLAGS = "-DTestflight -DDebug";
 				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
