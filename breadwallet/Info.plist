@@ -12,7 +12,7 @@
 			<key>CFBundleTypeIconFiles</key>
 			<array/>
 			<key>CFBundleTypeName</key>
-			<string>Bitcoin Payment Request</string>
+			<string>Vertcoin Payment Request</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>bitcoin.paymentrequest</string>
@@ -22,7 +22,7 @@
 			<key>CFBundleTypeIconFiles</key>
 			<array/>
 			<key>CFBundleTypeName</key>
-			<string>Bitcoin Payment</string>
+			<string>Vertcoin Payment</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>bitcoin.payment</string>
@@ -32,7 +32,7 @@
 			<key>CFBundleTypeIconFiles</key>
 			<array/>
 			<key>CFBundleTypeName</key>
-			<string>Bitcoin Payment ACK</string>
+			<string>Vertcoin Payment ACK</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>bitcoin.paymentack</string>
@@ -143,7 +143,7 @@
 				<string>public.data</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>Bitcoin Payment Request</string>
+			<string>Vertcoin Payment Request</string>
 			<key>UTTypeIdentifier</key>
 			<string>bitcoin.paymentrequest</string>
 			<key>UTTypeTagSpecification</key>
@@ -158,7 +158,7 @@
 				<string>public.data</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>Bitcoin Payment</string>
+			<string>Vertcoin Payment</string>
 			<key>UTTypeIdentifier</key>
 			<string>bitcoin.payment</string>
 			<key>UTTypeTagSpecification</key>
@@ -173,7 +173,7 @@
 				<string>public.data</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>Bitcoin Payment ACK</string>
+			<string>Vertcoin Payment ACK</string>
 			<key>UTTypeIdentifier</key>
 			<string>bitcoin.paymentack</string>
 			<key>UTTypeTagSpecification</key>
