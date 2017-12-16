@@ -28,12 +28,12 @@ class AboutViewController : UIViewController {
 
     private func addSubviews() {
         view.addSubview(titleLabel)
-        view.addSubview(logoBackground)
-        logoBackground.addSubview(logo)
-        view.addSubview(blog)
+        view.addSubview(logo)
+        //logoBackground.addSubview(logo)
+        //view.addSubview(blog)
         view.addSubview(twitter)
         view.addSubview(reddit)
-        view.addSubview(privacy)
+        //view.addSubview(privacy)
         view.addSubview(footer)
     }
 
@@ -41,30 +41,28 @@ class AboutViewController : UIViewController {
         titleLabel.constrain([
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: C.padding[2]),
             titleLabel.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: C.padding[2]) ])
-        logoBackground.constrain([
-            logoBackground.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            logoBackground.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: C.padding[3]),
-            logoBackground.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
-            logoBackground.heightAnchor.constraint(equalTo: logoBackground.widthAnchor, multiplier: 342.0/553.0) ])
-        logo.constrain(toSuperviewEdges: nil)
-        blog.constrain([
-            blog.topAnchor.constraint(equalTo: logoBackground.bottomAnchor, constant: C.padding[2]),
-            blog.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            blog.trailingAnchor.constraint(equalTo: view.trailingAnchor) ])
+        logo.constrain([
+            logo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            logo.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: C.padding[3]),
+            logo.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            logo.heightAnchor.constraint(equalTo: logo.widthAnchor, multiplier: 342.0/553.0) ])
+        //logo.constrain(toSuperviewEdges: nil)
         twitter.constrain([
+            twitter.topAnchor.constraint(equalTo: logo.bottomAnchor, constant: C.padding[2]),
+            twitter.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            twitter.trailingAnchor.constraint(equalTo: view.trailingAnchor) ])
+        /*twitter.constrain([
             twitter.topAnchor.constraint(equalTo: blog.bottomAnchor, constant: C.padding[2]),
             twitter.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             twitter.trailingAnchor.constraint(equalTo: view.trailingAnchor) ])
+        */
         reddit.constrain([
             reddit.topAnchor.constraint(equalTo: twitter.bottomAnchor, constant: C.padding[2]),
             reddit.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             reddit.trailingAnchor.constraint(equalTo: view.trailingAnchor) ])
-        privacy.constrain([
-            privacy.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            privacy.topAnchor.constraint(equalTo: reddit.bottomAnchor, constant: C.padding[2])])
         footer.constrain([
             footer.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            footer.topAnchor.constraint(equalTo: privacy.bottomAnchor) ])
+            footer.topAnchor.constraint(equalTo: reddit.bottomAnchor) ])
     }
 
     private func setData() {
@@ -73,6 +71,7 @@ class AboutViewController : UIViewController {
         privacy.setTitle(S.About.privacy, for: .normal)
         privacy.titleLabel?.font = UIFont.customBody(size: 13.0)
         footer.textAlignment = .center
+        logo.contentMode = .scaleAspectFill
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String, let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
             footer.text = String(format: S.About.footer, "\(version) (\(build))")
         }
@@ -83,10 +82,10 @@ class AboutViewController : UIViewController {
             myself.presentURL(string: "https://breadapp.com/blog/")
         }
         twitter.button.tap = strongify(self) { myself in
-            myself.presentURL(string: "https://twitter.com/breadapp")
+            myself.presentURL(string: "https://twitter.com/vertcoin")
         }
         reddit.button.tap = strongify(self) { myself in
-            myself.presentURL(string: "https://reddit.com/r/breadwallet/")
+            myself.presentURL(string: "https://reddit.com/r/vertcoin/")
         }
         privacy.tap = strongify(self) { myself in
             myself.presentURL(string: "https://breadapp.com/privacy-policy")
