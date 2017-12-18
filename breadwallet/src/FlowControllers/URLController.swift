@@ -27,7 +27,7 @@ class URLController : Trackable {
         ])
 
         switch url.scheme ?? "" {
-        case "bread":
+        case "vertwallet":
             if let query = url.query {
                 for component in query.components(separatedBy: "&") {
                     let pair = component.components(separatedBy: "+")
@@ -62,7 +62,7 @@ class URLController : Trackable {
                 return handleBitcoinUri(uri)
             }
             return true
-        case "bitcoin":
+        case "vertcoin":
             return handleBitcoinUri(url)
         case "bitid":
             if BRBitID.isBitIDURL(url) {

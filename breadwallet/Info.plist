@@ -57,7 +57,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>bitcoin</string>
+			<string>vertcoin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>bitcoin</string>
@@ -67,20 +67,20 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>org.voisine.bread</string>
+			<string>org.vertcoin.wallet</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>bread</string>
+				<string>vertwallet</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>bitid</string>
+			<string>vertid</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>bitid</string>
+				<string>vertid</string>
 			</array>
 		</dict>
 	</array>
@@ -145,7 +145,7 @@
 			<key>UTTypeDescription</key>
 			<string>Vertcoin Payment Request</string>
 			<key>UTTypeIdentifier</key>
-			<string>bitcoin.paymentrequest</string>
+			<string>vertcoin.paymentrequest</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.mime-type</key>
@@ -160,7 +160,7 @@
 			<key>UTTypeDescription</key>
 			<string>Vertcoin Payment</string>
 			<key>UTTypeIdentifier</key>
-			<string>bitcoin.payment</string>
+			<string>vertcoin.payment</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.mime-type</key>
@@ -175,7 +175,7 @@
 			<key>UTTypeDescription</key>
 			<string>Vertcoin Payment ACK</string>
 			<key>UTTypeIdentifier</key>
-			<string>bitcoin.paymentack</string>
+			<string>vertcoin.paymentack</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.mime-type</key>
