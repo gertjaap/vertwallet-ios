@@ -60,7 +60,7 @@ class StartImportViewController : UIViewController {
             illustration.constraint(.width, constant: 64.0),
             illustration.constraint(.height, constant: 84.0),
             illustration.constraint(.centerX, toView: header, constant: 0.0),
-            illustration.constraint(.centerY, toView: header, constant: -C.padding[1]) ])
+            illustration.constraint(.centerY, toView: header, constant: C.padding[2]) ])
         leftCaption.constrain([
             leftCaption.topAnchor.constraint(equalTo: illustration.bottomAnchor, constant: C.padding[1]),
             leftCaption.trailingAnchor.constraint(equalTo: header.centerXAnchor, constant: -C.padding[2]),

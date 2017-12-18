@@ -480,8 +480,8 @@ enum S {
     }
 
     enum Import {
-        static let leftCaption = NSLocalizedString("Import.leftCaption", value: "Wallet to be imported", comment: "Caption for graphics")
-        static let rightCaption = NSLocalizedString("Import.rightCaption", value: "Your Vertwallet Wallet", comment: "Caption for graphics")
+        static let leftCaption = NSLocalizedString("Import.leftCaption", value: "Wallet to import", comment: "Caption for graphics")
+        static let rightCaption = NSLocalizedString("Import.rightCaption", value: "Your Vertwallet", comment: "Caption for graphics")
         static let importMessage = NSLocalizedString("Import.message", value: "Importing a wallet transfers all the money from your other wallet into your Vertwallet wallet using a single transaction.", comment: "Import wallet intro screen message")
         static let importWarning = NSLocalizedString("Import.warning", value: "Importing a wallet does not include transaction history or other details.", comment: "Import wallet intro warning message")
         static let scan = NSLocalizedString("Import.scan", value: "Scan Private Key", comment: "Scan Private key button label")
