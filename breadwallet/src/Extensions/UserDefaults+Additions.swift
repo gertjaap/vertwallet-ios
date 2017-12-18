@@ -38,10 +38,18 @@ extension UserDefaults {
 
     static var defaultCurrencyCode: String {
         get {
-            guard defaults.object(forKey: defaultCurrencyCodeKey) != nil else {
-                return Locale.current.currencyCode ?? "USD"
+            var currencyCode = "USD";
+            if defaults.object(forKey: defaultCurrencyCodeKey) == nil {
+                currencyCode = Locale.current.currencyCode ?? "USD"
+            } else {
+                currencyCode = defaults.string(forKey: defaultCurrencyCodeKey)!
             }
-            return defaults.string(forKey: defaultCurrencyCodeKey)!
+            
+            // Temporary fix for rate failures while we only support these two currencies.
+            if(!(currencyCode == "USD" || currencyCode == "EUR")) {
+                return "USD";
+            }
+            return currencyCode;
         }
         set { defaults.set(newValue, forKey: defaultCurrencyCodeKey) }
     }
