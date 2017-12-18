@@ -10,6 +10,8 @@ import UIKit
 
 typealias Reducer = (State) -> State
 typealias Selector = (_ oldState: State, _ newState: State) -> Bool
+private var subscriptionLock = NSLock()
+private var removingAll = false;
 
 protocol Action {
     var reduce: Reducer { get }
@@ -157,11 +159,13 @@ class Store {
     func lazySubscribe(_ subscriber: Subscriber, selector: @escaping Selector, callback: @escaping (State) -> Void) {
         let key = subscriber.hashValue
         let subscription = Subscription(selector: selector, callback: callback)
+        subscriptionLock.lock();
         if subscriptions[key] != nil {
             subscriptions[key]?.append(subscription)
         } else {
             subscriptions[key] = [subscription]
         }
+        subscriptionLock.unlock();
     }
 
     func subscribe(_ subscriber: Subscriber, name: TriggerName, callback: @escaping (TriggerName?) -> Void) {
@@ -175,8 +179,15 @@ class Store {
     }
 
     func unsubscribe(_ subscriber: Subscriber) {
+        if(removingAll) {
+            return
+        }
+        
+        subscriptionLock.unlock();
         subscriptions.removeValue(forKey: subscriber.hashValue)
         triggers.removeValue(forKey: subscriber.hashValue)
+        subscriptionLock.unlock();
+        
     }
 
     //MARK: - Private
@@ -190,8 +201,14 @@ class Store {
     }
 
     func removeAllSubscriptions() {
+        removingAll = true
+        subscriptionLock.lock()
         subscriptions.removeAll()
+        
         triggers.removeAll()
+        subscriptionLock.unlock()
+        removingAll = false;
+        
     }
 
     private var subscriptions: [Int: [Subscription]] = [:]
