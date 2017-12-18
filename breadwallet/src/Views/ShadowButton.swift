@@ -122,6 +122,8 @@ class ShadowButton: UIControl {
         label.textAlignment = .center
         label.isUserInteractionEnabled = false
         label.font = UIFont.customMedium(size: 16.0)
+        label.minimumScaleFactor = 0.6;
+        label.adjustsFontSizeToFitWidth = true;
         configureContentType()
     }
 
