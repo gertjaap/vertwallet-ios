@@ -192,7 +192,10 @@ class ModalPresenter : Subscriber, Trackable {
     }
 
     private func presentFaq(articleId: String? = nil) {
-        guard let url = URL(string: "https://docs.vertcoin.org/") else {
+        
+        let urlString = articleId == nil ? "https://docs.vertcoin.org/" : "https://docs.vertcoin.org/vertwallet-ios/\(articleId!)";
+        
+        guard let url = URL(string: urlString) else {
             return //be safe
         }
         
