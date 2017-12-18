@@ -217,6 +217,7 @@
 		75A2A81F1DA5938500A983D8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2A81E1DA5938500A983D8 /* NotificationService.swift */; };
 		75C735AA1DAA1B9C00251ECF /* libunbound.c in Sources */ = {isa = PBXBuildFile; fileRef = 755CD4121DAA0E3E0075898E /* libunbound.c */; };
 		A317D6CB1FE5D4D800F50126 /* TodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 75A2A8081DA5936F00A983D8 /* TodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A317D6CC1FE6684600F50126 /* NotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 75A2A81C1DA5938500A983D8 /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A3C13D181FD54A0E00D56369 /* Lyra2RE.c in Sources */ = {isa = PBXBuildFile; fileRef = A3C13D001FD54A0E00D56369 /* Lyra2RE.c */; };
 		A3C13D191FD54A0E00D56369 /* keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = A3C13D031FD54A0E00D56369 /* keccak.c */; };
 		A3C13D1A1FD54A0E00D56369 /* blake.c in Sources */ = {isa = PBXBuildFile; fileRef = A3C13D081FD54A0E00D56369 /* blake.c */; };
@@ -580,6 +581,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				A317D6CC1FE6684600F50126 /* NotificationServiceExtension.appex in Embed App Extensions */,
 				A317D6CB1FE5D4D800F50126 /* TodayExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
