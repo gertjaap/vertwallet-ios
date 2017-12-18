@@ -50,7 +50,7 @@ enum S {
     }
 
     enum Scanner {
-        static let flashButtonLabel = NSLocalizedString("Scanner.flashButtonLabel", value:"Camera Flash", comment: "Scan bitcoin address camera flash toggle")
+        static let flashButtonLabel = NSLocalizedString("Scanner.flashButtonLabel", value:"Camera Flash", comment: "Scan Vertcoin address camera flash toggle")
     }
 
     enum Send {
@@ -349,7 +349,7 @@ enum S {
     }
 
     enum RequestAnAmount {
-        static let title = NSLocalizedString("RequestAnAmount.title", value:"Request an Amount", comment: "Request a specific amount of bitcoin")
+        static let title = NSLocalizedString("RequestAnAmount.title", value:"Request an Amount", comment: "Request a specific amount of Vertcoin")
         static let noAmount = NSLocalizedString("RequestAnAmount.noAmount", value: "Please enter an amount first.", comment: "No amount entered error message.")
     }
 
@@ -487,7 +487,7 @@ enum S {
         static let scan = NSLocalizedString("Import.scan", value: "Scan Private Key", comment: "Scan Private key button label")
         static let title = NSLocalizedString("Import.title", value: "Import Wallet", comment: "Import Wallet screen title")
         static let importing = NSLocalizedString("Import.importing", value: "Importing Wallet", comment: "Importing wallet progress view label")
-        static let confirm = NSLocalizedString("Import.confirm", value: "Send %1$@ from this private key into your wallet? The bitcoin network will receive a fee of %2$@.", comment: "Sweep private key confirmation message")
+        static let confirm = NSLocalizedString("Import.confirm", value: "Send %1$@ from this private key into your wallet? The Vertcoin network will receive a fee of %2$@.", comment: "Sweep private key confirmation message")
         static let checking = NSLocalizedString("Import.checking", value: "Checking private key balance...", comment: "Checking private key balance progress view text")
         static let password = NSLocalizedString("Import.password", value: "This private key is password protected.", comment: "Enter password alert view title")
         static let passwordPlaceholder = NSLocalizedString("Import.passwordPlaceholder", value: "password", comment: "password textfield placeholder")
@@ -507,7 +507,7 @@ enum S {
 
     enum BitID {
         static let title = NSLocalizedString("BitID.title", value: "BitID Authentication Request", comment: "BitID Authentication Request alert view title")
-        static let authenticationRequest = NSLocalizedString("BitID.authenticationRequest", value: "%1$@ is requesting authentication using your bitcoin wallet", comment: "<sitename> is requesting authentication using your bitcoin wallet")
+        static let authenticationRequest = NSLocalizedString("BitID.authenticationRequest", value: "%1$@ is requesting authentication using your Vertcoin wallet", comment: "<sitename> is requesting authentication using your Vertcoin wallet")
         static let deny = NSLocalizedString("BitID.deny", value: "Deny", comment: "Deny button label")
         static let approve = NSLocalizedString("BitID.approve", value: "Approve", comment: "Approve button label")
         static let success = NSLocalizedString("BitID.success", value: "Successfully Authenticated", comment: "BitID success alert title")
