@@ -120,7 +120,7 @@ open class BRAPIClient : NSObject, URLSessionDelegate, URLSessionTaskDelegate, B
         key.compressed = 1 
         if BRKeySetPrivKey(&key, keyStr) == 0 {
             #if DEBUG
-                fatalError("Unable to decode private key")
+                return nil;
             #endif
         }
         return key
