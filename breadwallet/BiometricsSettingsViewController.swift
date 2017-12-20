@@ -176,6 +176,9 @@ extension BiometricsSettingsViewController : UITextViewDelegate {
             guard !didTapSpendingLimit else { return false }
             didTapSpendingLimit = true
             presentSpendingLimit?()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.didTapSpendingLimit = false
+            }
         } else {
             presentCantUseBiometricsAlert()
         }
