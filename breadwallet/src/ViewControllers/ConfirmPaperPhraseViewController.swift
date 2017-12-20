@@ -87,7 +87,7 @@ class ConfirmPaperPhraseViewController : UIViewController {
     private func addConstraints() {
         header.constrainTopCorners(sidePadding: 0, topPadding: 0)
         header.constrain([
-            header.constraint(.height, constant: 152.0) ])
+            header.constraint(.height, constant: 172.0) ])
         label.constrainBottomCorners(sidePadding: C.padding[1], bottomPadding: C.padding[2])
         confirmFirstPhrase.constrain([
             confirmFirstPhrase.constraint(toBottom: header, constant: 0.0),
