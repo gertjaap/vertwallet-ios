@@ -28,7 +28,7 @@ class AboutViewController : UIViewController {
 
     private func addSubviews() {
         view.addSubview(titleLabel)
-        view.addSubview(logo)
+        view.addSubview(logoBackground)
         logoBackground.addSubview(logo)
         //view.addSubview(blog)
         view.addSubview(twitter)
