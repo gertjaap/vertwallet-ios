@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01E78AC61FECCFCB009F4096 /* LAContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3D2DC1E8CBA790070178E /* LAContext+Extensions.swift */; };
 		1B1AFFA01FB7EF7C00E61908 /* BiometricsSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFF9E1FB7EF7C00E61908 /* BiometricsSettingsViewController.swift */; };
 		1B1AFFA11FB7EF7C00E61908 /* BiometricsSpendingLimitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFF9F1FB7EF7C00E61908 /* BiometricsSpendingLimitViewController.swift */; };
 		22122B721F0B8996000E9AB9 /* BRAPIClient+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22122B711F0B8996000E9AB9 /* BRAPIClient+Events.swift */; };
@@ -4156,6 +4157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E78AC61FECCFCB009F4096 /* LAContext+Extensions.swift in Sources */,
 				75A2A7B41DA5934300A983D8 /* breadwalletUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

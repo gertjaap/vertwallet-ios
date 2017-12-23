@@ -28,7 +28,7 @@ class StartViewController : UIViewController {
     private let didTapCreate: () -> Void
     private let background = LoginBackgroundView()
     private var logo: UIImageView = {
-        let image = UIImageView(image: #imageLiteral(resourceName: "Logo"))
+        let image = UIImageView(image: #imageLiteral(resourceName: "LogoStart"))
         image.contentMode = .scaleAspectFit
         return image
     }()

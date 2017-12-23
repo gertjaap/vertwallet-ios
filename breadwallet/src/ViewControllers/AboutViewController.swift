@@ -28,8 +28,8 @@ class AboutViewController : UIViewController {
 
     private func addSubviews() {
         view.addSubview(titleLabel)
-        view.addSubview(logo)
-        //logoBackground.addSubview(logo)
+        view.addSubview(logoBackground)
+        logoBackground.addSubview(logo)
         //view.addSubview(blog)
         view.addSubview(twitter)
         view.addSubview(reddit)
@@ -41,14 +41,14 @@ class AboutViewController : UIViewController {
         titleLabel.constrain([
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: C.padding[2]),
             titleLabel.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: C.padding[2]) ])
-        logo.constrain([
-            logo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            logo.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: C.padding[3]),
-            logo.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
-            logo.heightAnchor.constraint(equalTo: logo.widthAnchor, multiplier: 342.0/553.0) ])
-        //logo.constrain(toSuperviewEdges: nil)
+        logoBackground.constrain([
+            logoBackground.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            logoBackground.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: C.padding[3]),
+            logoBackground.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            logoBackground.heightAnchor.constraint(equalTo: logo.widthAnchor, multiplier: 342.0/553.0) ])
+        logo.constrain(toSuperviewEdges: nil)
         twitter.constrain([
-            twitter.topAnchor.constraint(equalTo: logo.bottomAnchor, constant: C.padding[2]),
+            twitter.topAnchor.constraint(equalTo: logoBackground.bottomAnchor, constant: C.padding[2]),
             twitter.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             twitter.trailingAnchor.constraint(equalTo: view.trailingAnchor) ])
         /*twitter.constrain([
