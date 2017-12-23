@@ -10,7 +10,7 @@ import UIKit
 
 private let largeFontSize: CGFloat = 26.0
 private let smallFontSize: CGFloat = 13.0
-private let logoWidth: CGFloat = 0.22 //percentage of width
+private let logoWidth: CGFloat = 0.42 //percentage of width
 
 class AccountHeaderView : UIView, GradientDrawable, Subscriber {
 
@@ -71,7 +71,7 @@ class AccountHeaderView : UIView, GradientDrawable, Subscriber {
         didSet { setBalances() }
     }
     private var logo: UIImageView = {
-        let image = UIImageView(image: #imageLiteral(resourceName: "Logo"))
+        let image = UIImageView(image: #imageLiteral(resourceName: "LogoStart"))
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -188,7 +188,7 @@ class AccountHeaderView : UIView, GradientDrawable, Subscriber {
 
         logo.constrain([
             logo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: C.padding[2]),
-            logo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -C.padding[10]),
+            logo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -C.padding[8]),
             logo.heightAnchor.constraint(equalTo: logo.widthAnchor, multiplier: C.Sizes.logoAspectRatio),
             logo.widthAnchor.constraint(equalTo: widthAnchor, multiplier: logoWidth) ])
         modeLabel.constrain([

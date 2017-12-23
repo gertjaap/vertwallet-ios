@@ -39,9 +39,9 @@ extension LAContext {
             switch(context.biometryType) {
             case .none:
                 return .none
-            case .touchID:
+            case .typeTouchID:
                 return .touch
-            case .faceID:
+            case .typeFaceID:
                 return .face
             }
         } else {
