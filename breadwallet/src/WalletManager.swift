@@ -576,7 +576,8 @@ class WalletManager : BRWalletListener, BRPeerManagerListener {
             b.pointee.target = UInt32(bitPattern: sqlite3_column_int(sql, 2))
             b.pointee.totalTx = UInt32(bitPattern: sqlite3_column_int(sql, 3))
             b.pointee.version = UInt32(bitPattern: sqlite3_column_int(sql, 4))
-            if(UInt32(bitPattern: sqlite3_column_int(sql, 5)) >= 3316660096) // overflow
+            let maxTime:UInt32 = 0xC5B03780
+            if(UInt32(bitPattern: sqlite3_column_int(sql, 5)) >= maxTime) // overflow
             {
                 b.pointee.timestamp = UInt32(NSTimeIntervalSince1970)
             }
