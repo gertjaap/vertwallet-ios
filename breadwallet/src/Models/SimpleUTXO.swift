@@ -17,10 +17,10 @@ struct SimpleUTXO {
     let satoshis: UInt64
 
     init?(json: [String: Any]) {
-        guard let txid = json["txid"] as? String,
+        guard let txid = json["txhash"] as? String,
             let vout = json["vout"] as? Int,
-            let scriptPubKey = json["scriptPubKey"] as? String,
-            let satoshis = json["satoshis"] as? UInt64 else { return nil }
+            let scriptPubKey = json["script"] as? String,
+            let satoshis = json["value"] as? UInt64 else { return nil }
         guard let hashData = txid.hexToData,
             let scriptData = scriptPubKey.hexToData else { return nil }
 
