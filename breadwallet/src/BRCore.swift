@@ -432,6 +432,7 @@ class BRWallet {
         return BRWalletTotalSent(cPtr)
     }
     
+    
     // fee-per-kb of transaction size to use when creating a transaction
     var feePerKb: UInt64 {
         get { return BRWalletFeePerKb(cPtr) }
