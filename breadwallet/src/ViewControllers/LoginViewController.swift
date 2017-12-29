@@ -177,6 +177,19 @@ class LoginViewController : UIViewController, Subscriber, Trackable {
         }
     }
 
+    private func padding() -> Int {
+        var imagePadding = 0
+        if(UIScreen.main.bounds.size.height <= 568) // iPhone SE & 4
+        {
+            imagePadding = 9
+        }
+        else
+        {
+            imagePadding = 13
+        }
+        return imagePadding
+    }
+
     private func addConstraints() {
         backgroundView.constrain(toSuperviewEdges: nil)
         if walletManager != nil {
@@ -197,7 +210,7 @@ class LoginViewController : UIViewController, Subscriber, Trackable {
             topControlContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: C.padding[2]),
             topControlContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -C.padding[2]),
             topControlContainer.heightAnchor.constraint(equalToConstant: topControlHeight) ])
-        addressButton.constrain([
+        addressButton.constrain([   
             addressButton.leadingAnchor.constraint(equalTo: topControlContainer.leadingAnchor),
             addressButton.topAnchor.constraint(equalTo: topControlContainer.topAnchor),
             addressButton.trailingAnchor.constraint(equalTo: topControlContainer.centerXAnchor),
@@ -209,7 +222,7 @@ class LoginViewController : UIViewController, Subscriber, Trackable {
             scanButton.bottomAnchor.constraint(equalTo: topControlContainer.bottomAnchor) ])
 
         logo.constrain([
-            logo.topAnchor.constraint(equalTo: topControlContainer.bottomAnchor, constant: C.padding[8]),
+            logo.topAnchor.constraint(equalTo: topControlContainer.bottomAnchor, constant: C.padding[padding()]),
             logo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logo.heightAnchor.constraint(equalTo: logo.widthAnchor, multiplier: C.Sizes.logoAspectRatio),
             logo.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.35) ])
